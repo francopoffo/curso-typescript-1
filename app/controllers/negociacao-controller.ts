@@ -14,6 +14,7 @@ export class NegociacaoController {
   adiciona(): void {
     const negociacao = this.criaNegociacao();
     console.log(negociacao);
+    this.limpaForm();
   }
 
   criaNegociacao(): Negociacao {
@@ -22,5 +23,12 @@ export class NegociacaoController {
     const quantidade = parseInt(this.inputQuantidade.value);
     const valor = parseFloat(this.inputValor.value);
     return new Negociacao(date, quantidade, valor);
+  }
+
+  limpaForm(): void {
+    this.inputData.value = "";
+    this.inputQuantidade.value = "";
+    this.inputData.value = "";
+    this.inputData.focus();
   }
 }
