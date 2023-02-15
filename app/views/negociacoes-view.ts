@@ -7,7 +7,7 @@ export class NegociacoesView {
     this.elemento = document.querySelector(seletor);
   }
 
-  template(model: Negociacoes): string {
+  protected template(model: Negociacoes): string {
     return `
         <table class="table table-hover table-bordered">
             <thead>
