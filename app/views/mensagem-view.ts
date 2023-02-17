@@ -2,7 +2,7 @@ export class MensagemView {
   private elemento: HTMLElement;
 
   constructor(seletor: string) {
-    this.elemento = document.querySelector(seletor);
+    this.elemento = document.querySelector(seletor) as HTMLInputElement;
   }
 
   protected template(model: string): string {
